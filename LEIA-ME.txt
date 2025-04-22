@@ -1,0 +1,83 @@
+# Projeto de Landing Page para Pagamento de Dízimos por PIX
+
+Este projeto consiste em uma landing page moderna para uma igreja receber dízimos e ofertas através do sistema de pagamento PIX.
+
+## Requisitos
+
+- Python 3.7 ou superior
+- Flask
+- qrcode
+- Pillow
+- Um navegador moderno (Chrome, Firefox, Safari, Edge)
+
+## Instalação
+
+1. Clone o repositório ou crie os arquivos conforme estrutura abaixo:
+
+```
+igreja-dizimos/
+├── app.py
+├── requirements.txt
+└── templates/
+    └── index.html
+```
+
+2. Crie um ambiente virtual e ative-o:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # No Windows: venv\Scripts\activate
+```
+
+3. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Conteúdo do arquivo `requirements.txt`:
+```
+Flask==2.0.1
+qrcode==7.3.1
+Pillow==9.0.0
+```
+
+## Executando o Projeto
+
+1. Inicie o servidor Flask:
+
+```bash
+python app.py
+```
+
+2. Acesse a aplicação no navegador:
+```
+http://127.0.0.1:5000/
+```
+
+## Personalização
+
+Para personalizar a landing page:
+
+1. Altere o logotipo e as cores no arquivo `index.html` para corresponder à identidade visual da igreja
+2. Atualize as informações de PIX no arquivo `app.py`:
+   - `PIX_KEY`: Chave PIX da igreja
+   - `PIX_NAME`: Nome do beneficiário 
+   - `PIX_CITY`: Cidade do beneficiário
+
+## Observações Importantes
+
+- Em ambiente de produção, recomenda-se:
+  - Configurar HTTPS
+  - Implementar validação de dados mais robusta
+  - Utilizar uma biblioteca específica para geração de PIX
+  - Integrar com um banco de dados para registrar as transações
+  - Implementar um sistema de envio de e-mail de confirmação
+
+## Funcionalidades
+
+1. Formulário para coleta de informações do contribuinte
+2. Geração de QR Code para pagamento PIX
+3. Opção para copiar a chave PIX
+4. Animação de ondas no fundo da página
+5. Layout responsivo para visualização em dispositivos móveis
